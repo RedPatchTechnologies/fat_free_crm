@@ -467,6 +467,7 @@ en-GB:
   total_leads: Total Leads
   show_status_info_small: Show status information for this lead.
   show_contact_info_small: Show contact information for this lead.
+  validation: Validation in progress
 
   # Views -> Opportunities.
   #----------------------------------------------------------------------------

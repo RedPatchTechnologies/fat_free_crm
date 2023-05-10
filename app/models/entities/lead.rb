@@ -146,7 +146,16 @@ class Lead < ActiveRecord::Base
   # Attach a task to the lead if it hasn't been attached already.
   #----------------------------------------------------------------------------
   def attach!(task)
-    tasks << task unless task_ids.include?(task.id)
+    
+    logger.debug(task.class.name.downcase )
+    if task.class.name.downcase == "campaign"
+      task.attach!(self)
+    else
+      tasks << task unless task_ids.include?(task.id)
+    end
+    
+    
+    
   end
 
   # Discard a task from the lead.

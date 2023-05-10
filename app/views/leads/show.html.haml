@@ -14,7 +14,9 @@
   = hook(:show_lead_bottom, self, {entity: @lead}) do
 
     = render partial: "tasks/tasks", locals: {object: @lead}
+	
+    = render partial: "campaigns/campaigns", locals: {object: @lead}
 
     = render partial: "versions/versions", locals: {object: @lead}
 
-    = load_select_popups_for(@lead, :tasks)
+    = load_select_popups_for(@lead, :tasks, :campaigns)

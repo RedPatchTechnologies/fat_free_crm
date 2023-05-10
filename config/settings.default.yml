@@ -305,6 +305,7 @@ lead_status:
   - :contacted
   - :converted
   - :rejected
+  - :validation
 
 lead_source:
   - :campaign
