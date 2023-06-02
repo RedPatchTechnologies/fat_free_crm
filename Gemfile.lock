@@ -148,6 +148,7 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
+    date (3.3.3)
     devise (4.9.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -234,6 +235,9 @@ GEM
     minitest (5.18.0)
     msgpack (1.6.0)
     nenv (0.3.0)
+    net-imap (0.3.4)
+      date
+      net-protocol
     net-pop (0.1.2)
       net-protocol
     net-protocol (0.2.1)
@@ -494,6 +498,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mini_racer
+  net-imap
   net-pop
   net-smtp
   nokogiri (>= 1.8.1)
