@@ -147,7 +147,6 @@ class Lead < ActiveRecord::Base
   #----------------------------------------------------------------------------
   def attach!(task)
     
-    logger.debug(task.class.name.downcase )
     if task.class.name.downcase == "campaign"
       task.attach!(self)
     else

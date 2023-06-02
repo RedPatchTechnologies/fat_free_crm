@@ -203,7 +203,7 @@ class LeadsController < EntitiesController
 
   #----------------------------------------------------------------------------
   def get_campaigns
-    @campaigns = Campaign.my(current_user).order('name')
+    @campaigns = Campaign.state("planned").my(current_user).order('name')
   end
 
   def set_options

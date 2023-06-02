@@ -76,6 +76,7 @@ Rails.application.routes.draw do
       post :subscribe
       post :unsubscribe
       get :leads
+      get :export_leads
       get :opportunities
     end
   end

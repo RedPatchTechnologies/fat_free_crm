@@ -160,6 +160,28 @@ class CampaignsController < EntitiesController
     end
   end
 
+  def export_leads
+    
+    leads = @campaign.leads
+    #text = leads.map { |lead| "\"#{lead.first_name.to_s}\"<#{lead.email}>" }.join(",\n")
+
+    csv_data = CSV.generate do |csv|
+      # Define header
+      csv << ["CompanyName", "Email"] # Add as many fields as you have
+
+      # Fill CSV rows
+      leads.each do |lead|
+        csv << [lead.first_name, lead.email] # Change these to match your lead attributes
+      end
+    end
+
+
+
+    send_data csv_data, type: 'text/plain', filename: @campaign.name + '_leads.csv'
+    
+  end
+
+
   private
 
   #----------------------------------------------------------------------------

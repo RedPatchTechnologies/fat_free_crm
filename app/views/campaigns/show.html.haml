@@ -17,7 +17,11 @@
     = render "tasks/tasks", object: @campaign
 
     = render "leads/leads", object: @campaign
-
+    %br/
+    = link_to "Export Leads (#{@campaign.leads.count})", export_leads_campaign_path, class: 'button'
+    
+    %br/
+	
     = render "opportunities/opportunities", object: @campaign
 
     = render "versions/versions", object: @campaign
