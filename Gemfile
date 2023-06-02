@@ -73,10 +73,10 @@ group :test do
   gem 'sqlite3', '~> 1.4.0'
 end
 
-group :heroku do
+#group :heroku do
   gem 'rails_12factor'
   gem 'puma'
-end
+  #end
 
 gem 'responds_to_parent', git: 'https://github.com/CloCkWeRX/responds_to_parent.git', branch: 'patch-2' # Temporarily pointed at git until https://github.com/zendesk/responds_to_parent/pull/7 is released
 gem 'acts_as_commentable', git: 'https://github.com/fatfreecrm/acts_as_commentable.git', branch: 'rails-61' # Our fork
