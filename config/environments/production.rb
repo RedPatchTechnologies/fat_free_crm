@@ -42,6 +42,7 @@ if defined?(FatFreeCRM::Application)
 
     # See everything in the log (default is :info)
     config.log_level = :info
+    RAILS_DEFAULT_LOGGER = Logger.new('log/production.log')
 
     # Use a different logger for distributed setups
     # config.logger = SyslogLogger.new
