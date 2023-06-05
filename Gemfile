@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+ruby "2.7.1"
 
 # Uncomment the database that you have configured in config/database.yml
 # ----------------------------------------------------------------------
